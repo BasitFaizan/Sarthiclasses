@@ -20,8 +20,8 @@ navbar.innerHTML = `
           <a class = 'quiz'><span>Quiz</span></a>
         </div>
         <div class="dropDown dropDown2">
-          <a class = 'class11' href = 'class11.html'><span>class 11</span></a>
-          <a class = 'class12' href = 'class12.html'><span>class 12</span></a>
+          <a href = "class11.html"><span>class 11</span></a>
+          <a href = "class12.html"><span>class 12</span></a>
         </div>
         </a></li>
         <li><a href="#contact">Contact us</a></li>
