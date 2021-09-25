@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+.loader{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1000000;
+  transition: opacity 0.3s ease-in-out;
+}
+.loader.inactive{
+  opacity: 0;
+}
+html {
+  font-size: 64.5%;
+  scroll-behavior: smooth;
+}
+
+.address {
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  width: 100vw;
+  height: 5rem;
+}
+
+.onePart {
+  width: 70vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onePart h4 {
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+
+.secondPart {
+  width: 20vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.logo {
+  width: 8rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+
+.firstNav {
+  width: 20vw;
+  display: inline-block;
+  float: left;
+  height: 5rem;
+  background: #F2C600;
+  transform: translateY(-0.5rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+.secondNav {
+  width: 80vw;
+  height: 5rem;
+  background: #F2C600;
+  display: inline-block;
+  float: right;
+  transform: translateY(-0.5rem);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.secondNav ul {
+  display: flex;
+}
+
+.secondNav ul li {
+  margin-top: 1.5rem;
+  width: 10vw;
+  margin-left: 2rem;
+}
+
+.category {
+  position: relative;
+}
+
+.secondNav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.secondNav ul li a:hover {
+  color: #00A8FF;
+  text-decoration: underline;
+}
+
+.dropDown {
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
+  opacity: 0;
+  width: 12rem;
+  height: 12rem;
+  background: #F2AF1A;
+  border-left: 0.5rem solid red;
+  display: flex;
+  flex-direction: column;
+  line-height: 4rem;
+  color: white;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  z-index: 10000;
+}
+.dropDown2{
+  top: 10rem;
+  left: 25rem;
+}
+.dropDown2.active{
+  top: 5rem;
+  left: 20rem;
+}
+.dropDown.active {
+  top: 2rem;
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.dropDown.active a{
+  display: flex;
+  flex-direction: column;
+}
+.dropDown2 {
+  top: 10rem;
+  left: 25rem;
+  height: 8rem;
+}
+.dropDown2.active {
+  top: 5rem;
+  left: 10rem;
+}
+
+.dropDown span {
+  margin-left: 1rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  top: 0;
+  transition: position 0.2s ease-in-out;
+}
+
+.home {
+  width: 100vw;
+  height: 79.2vh;
+  background: url("thisisengineering-raeng-h6gCRTCxM7o-unsplash.jpg");
+  background-size: cover;
+}
+
+.homeAbout {
+  width: 60vw;
+  height: 100%;
+  padding: 5rem;
+  padding-top: 10rem;
+  color: white;
+}
+
+.homeAbout h2 {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.homeAbout a{
+  text-decoration: none;
+}
+.btns {
+  width: 15rem;
+  height: 5rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  color: white;
+  margin-top: 8rem;
+  margin-left: 15rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.btns svg {
+  margin-left: 1rem;
+}
+
+.btns:hover {
+  background: black;
+  border: none;
+  color: white;
+}
+
+.services {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceOne {
+  width: 100%;
+  height: 17vh;
+  display: grid;
+  place-items: center;
+}
+.serviceOne h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+.serviceTwo {
+  width: 100vw;
+  height: 180vh;
+  display: grid;
+  grid-template-columns: repeat(3, 0.8fr);
+  grid-gap: 10px;
+}
+
+.serviceAbout {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0.2rem;
+}
+.serviceAbout:hover{
+  box-shadow: 0.4em 0.4rem 2rem rgba(0,0,0,0.4);
+}
+.serviceAbout p{
+  padding: 2rem;
+}
+.imageDiv{
+  width: 80%;
+}
+.imageDiv img{
+  object-fit: cover;
+  width: 100%;
+  height: 19rem;
+}
+.viewBtn{
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  background: #00D5FF;
+  color: white;
+}
+.aboutUs{
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+}
+.firstAbout{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstAbout p{
+  padding: 2rem;
+  font-size: 1.4rem;
+  padding-top: 3rem;
+}
+.firstAbout h1{
+  padding-top: 2rem;
+}
+.firstAbout h4{
+  padding-top: 2rem;
+}
+.secondAbout{
+  width: 50%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.aboutImg{
+  width: 70%;
+  height: 70%;
+  border: 1px solid black;
+  border-radius: 2rem;
+  background: url("IMG-20210914-WA0001.jpg");
+  background-size: cover
+}
+.gallery{
+  width: 100vw;
+  height: 100%;
+}
+.galleryImg{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.galleryImg .imgTag{
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  height: 28rem;
+}
+.galleryImg img:hover{
+  transform: scale(1.1);
+}
+.imgClass{
+  width: 95%;
+  height: 100%;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+.preview{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+.preview.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+.preview .previewOne{
+  width: 60rem;
+  height: 90%;
+  display: flex;
+  position: relative;
+  transform: scale(0.8);
+  transition: all 0.5s ease-out;
+}
+.preview.show .previewOne{
+  transform: scale(1);
+}
+.previewTwo{
+  display: grid;
+  place-items: center;
+}
+.previewTwo img{
+  width: 60rem;
+}
+.previewTwo img:hover{
+  transform: scale(1);
+}
+.close{
+  position: absolute;
+  top: 1rem;
+  right: -3rem;
+}
+.left,.right{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+.left{
+  left: 2rem;
+}
+.right{
+  right: 2rem;
+}
+.homeAbout a{
+  text-decoration: none;
+}
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 40.5%;
+  }
+  .home{
+    height: 30vh;
+  }
+  .serviceOne{
+    height: 7vh;
+  }
+  .serviceTwo{
+    height: 70vh;
+  }
+  .aboutUs{
+    height: 30vh;
+  }
+  .viewBtn{
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.5rem;
+  }
+}
+.contact{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contactDiv{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.contactOne{
+  width: 40%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.contactOne .contactImges{
+  width: 80%;
+  height: 20rem !important;
+  margin-top: 4rem;
+}
+.contactTwo{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+.contactTwo h2{
+  margin-bottom: 1rem;
+}
+.contactTwo h4{
+  margin-bottom: 1rem;
+}
+.socialMedia{
+  position: fixed;
+  width: 3vw;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  justify-content: space-around;
+  align-items: center;
+  background: #F7BF11;
+}
+.icon{
+  fill: #088DFF;
+}
+
+@media only screen and (min-width: 768px){
+  html {
+    font-size: 64.5%;
+  }
+  .home{
+    height: 79.2vh;
+  }
+  .serviceOne{
+    height: 17vh;
+  }
+  .serviceTwo{
+    height: 120vh;
+  }
+  .aboutUs{
+    height: 70vh;
+  }
+} 
+@media (max-width: 480px) {
+  html {
+    font-size: 35.5%;
+  }
+  .address{
+    display: none;
+  }
+  .firstNav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+    align-items: center;
+  }
+  .hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    margin-right: 3rem;
+    margin-top: 0.4rem;
+  }
+  .hamburger span{
+    width: 6rem;
+    height: 0.8rem;
+    background: white;
+    display: block;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+  .secondNav{
+    width: 100vw;
+    height: 35vh;
+    z-index: 100;
+    transform: translateX(-100%) translateY(-1rem);
+    transition: transform 0.5s ease-in-out;
+    top: 8rem;
+  }
+  .secondNav.active{
+    transform: translateX(0) translateY(-1rem);
+  }
+  .secondNav ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  .secondNav ul li{
+    margin-left: 1rem;
+    margin-top: 0;
+    display: flex;
+    width: 90%;
+    line-height: 7rem;
+  }
+  .secondNav ul li a{
+    font-size: 1.9rem;
+  }
+  .logo{
+    width: 12rem;
+  }
+  .home{
+    height: 80vw;
+  }
+  .serviceTwo{
+    grid-template-columns: 1fr;
+    height: 330vh;
+  }
+  .serviceTwo p{
+    padding: 5rem;
+  }
+  .viewBtn{
+    width: 15rem;
+    height: 6rem;
+    font-size: 1.9rem;
+  }
+  .imageDiv img{
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+  .socialMedia{
+    width: 5rem;
+  }
+  .aboutUs{
+    flex-direction: column-reverse;
+  }
+  .firstAbout,.secondAbout{
+    width: 100vw;
+  }
+  .firstAbout h1{
+    font-size: 2rem;
+  }
+  .firstAbout h4{
+    font-size: 2rem;
+  }
+  .firstAbout p{
+    padding: 4rem;
+    font-size: 2rem;
+  }
+  .galleryImg{
+    grid-template-columns: 1fr;
+    
+  }
+  .imgTag{
+    width: 100%;
+    height: 27rem !important;
+  }
+  .contactImges{
+    width: 100%;
+    height: 10rem !important;
+  }
+  .serviceOne{
+    height: 10rem;
+  }
+  .serviceAbout p{
+    font-size: 2.3rem;
+  }
+  .hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translateY(2.5rem);
+    height: 0.6rem;
+  }
+  .hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translateY(-2.5rem);
+    height: 0.6rem;
+  }
+  .hamburger.active span:nth-child(2){
+    opacity: 0;
+  }
+  .close{
+    top: 20%;
+    right: 3rem;
+  }
+  .contactDiv{
+    flex-direction: column;
+  }
+  .contactOne,.contactTwo{
+    width: 100%;
+    height: 50%;
+  }
+  .contactOne{
+    height: 20rem;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz.css" type="text/css" media="all" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+  <title>Sarthi/Quiz</title>
+</head>
+
+<body>
+  <div class="navbar"></div>
+  <div class="screen">
+    <div class="startBtn"><button type="submit">Play Quiz</button></div>
+    <div class="rules">
+      <div class="title">
+        <span>Rules of Sarthi Classes Quiz</span>
+      </div>
+      <div class="ruleStart">
+        <li>1. You have only <span class="color"> 20 minute</span> of timing</li>
+        <li>2. After clicking on one option you cannot be able to select any other option</li>
+        <li>3. You have to select your level - <span class="green">Begginer</span>, <span class="orange">Intermediate</span>, <span class="red">Advance</span></li>
+        <li>4. For Advance you have <span class="color"> 30 minute</span> of timing</li>
+        <li>5. All question contains 5 Marks</li>
+        <li>6. No negative markings</li>
+        <li>7. No. of Question is 20</li>
+      </div>
+      <div class="closeRule">
+        <button class="exit" type="submit">Exit</button>
+        <button class="continue" type="submit">Continue</button>
+      </div>
+    </div>
+    <div class="questionsQue">
+      
+    </div>
+    <div class="info">
+      <div class="infoTitle">Info</div>
+      <div class="infoStart">
+        <div class="animatedInput">
+          <input required class="NameInput" type="text" id="Name"/>
+          <label class="Name" for="Name">Enter your Name</label>
+        </div>
+        <div class="animatedInput">
+          <input required class="ClassInput" type="number" id="Class"/>
+          <label class="Class" for="Class">Enter your Class</label>
+        </div>
+        <div class="droping">
+          <div class="dropTitle">Select your level<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"> <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/> </svg></div>
+          <div class="dropOpt">
+            <li class="green opt">Beginner</li>
+            <li class="orange opt">Intermediate</li>
+            <li class="red opt">Advance</li>
+          </div>
+    </div>
+      </div>
+        <div class="closeRule xyz">
+          <button type="submit" class="continue continue1">continue</button>
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800
+    });
+  </script>-->
+  <script>
+    //let nameinput = document.querySelector('.NameInput').target.value;
+    let startBtn = document.querySelector('.startBtn');
+    let rules = document.querySelector('.rules');
+    let exit = document.querySelector('.exit');
+    let continues = document.querySelector('.continue');
+    let continue1 = document.querySelector('.continue1');
+    let questionsQue = document.querySelector('.questionsQue');
+    let dropTitle = document.querySelector('.dropTitle');
+    let dropOpt = document.querySelector('.dropOpt');
+    let opt = document.querySelectorAll('.opt');
+    let info= document.querySelector('.info')
+    startBtn.addEventListener('click', function() {
+      rules.classList.add('active');
+    });
+    dropTitle.addEventListener('click', function() {
+      dropOpt.classList.toggle('active');
+    });
+    exit.addEventListener('click', function() {
+      rules.classList.remove('active');
+    });
+    continue1.addEventListener('click', function() {
+      questionsQue.classList.add('active');
+      info.classList.remove('active');
+    });
+    continues.addEventListener('click', function() {
+      info.classList.add('active');
+      rules.classList.remove('active');
+    });
+    
+  </script>
+  <script src="Navbar.js" type="text/javascript" charset="utf-8"></script>
+  <script src="Question.js" type="text/javascript" charset="utf-8"></script>
+  <script src="Quiz.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+.section{
+ width: 100vw;
+ height: 100%;
+ display: flex;
+ justify-content: space-between;
+ overflow: hidden;
+ position: relative;
+}
+.sectionOne{
+  width: 70vw;
+}
+.sectionTwo{
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  border-left: 0.6px solid rgba(0,0,0,0.5);
+  height: auto;
+}
+.Subjective{
+  width: 100%;
+  height: 6rem;
+  border: 0.6px solid rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contentOne,.contentOne1,.contentOne2.contentOne3{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+.boxes{
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  height: 4rem;
+}
+.contentOne.active,.contentOne1.active,.contentOne2.active,.contentOne3.active{
+  height: 0;
+  overflow: hidden;
+}
+.icon{
+  transform: rotateZ(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+.icon.active{
+  transform: rotateZ(-180deg);
+}
+.player{
+  display: none;
+}
+
+@media screen and  (max-width: 480px) {
+  html{
+    font-size: 35.5%;
+  }
+  .sectionTwo{
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    margin-top: 2.5rem;
+  }
+  .sectionTwo.active{
+    transform: translateX(0);
+  }
+  .player{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 8vw;
+    height: 6vw;
+    position: fixed;
+    top: 8rem;
+    right: 2rem;
+    z-index: 10;
+  }
+  .player span{
+    width: 100%;
+    height: 0.6rem;
+    background: #000;
+    display: block;
+    transition: all 0.5s ease-in-out;
+  }
+  .player span:nth-child(2){
+    width: 60%;
+  }
+  .player span:nth-child(3){
+    width: 80%;
+  }
+  .player.active span{
+    width: 100%;
+  }
+  .player.active span:nth-child(2){
+    opacity: 0;
+  }
+  .player.active span:nth-child(1){
+    transform: rotate(45deg) translateY(2.5rem);
+  }
+  .player.active span:nth-child(3){
+    transform: rotate(-45deg) translateY(-2.5rem);
+  }
+}
