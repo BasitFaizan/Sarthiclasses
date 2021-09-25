@@ -20,8 +20,8 @@ navbar.innerHTML = `
           <a class = 'quiz'><span>Quiz</span></a>
         </div>
         <div class="dropDown dropDown2">
-          <a href = "class11.html"><span>class 11</span></a>
-          <a href = "class12.html"><span>class 12</span></a>
+          <a class = "class11"><span>class 11</span></a>
+          <a class = "class12"><span>class 12</span></a>
         </div>
         </a></li>
         <li><a href="#contact">Contact us</a></li>
@@ -59,4 +59,12 @@ hamburger.addEventListener('click', function() {
 let quiz = document.querySelector('.quiz');
 quiz.addEventListener('click',function(){
   window.location.href = 'Quiz.html'
+})
+let class11 = document.querySelector('.class11');
+class11.addEventListener('click',function(){
+  window.location.href = 'class11.html'
+})
+let class12 = document.querySelector('.class12');
+class12.addEventListener('click',function(){
+  window.location.href = 'class12.html'
 })
