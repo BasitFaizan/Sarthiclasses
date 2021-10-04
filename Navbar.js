@@ -62,9 +62,9 @@ quiz.addEventListener('click',function(){
 })
 let class11 = document.querySelector('.class11');
 class11.addEventListener('click',function(){
-  window.location.href = 'class11.html'
+  window.location.href = 'Class11.html'
 })
 let class12 = document.querySelector('.class12');
 class12.addEventListener('click',function(){
-  window.location.href = 'class12.html'
+  window.location.href = 'Class12.html'
 })
